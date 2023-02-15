@@ -8,6 +8,7 @@
   <artifactId>bicipalma</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>bicipalma</name>
+  <packaging>jar</packaging>
 
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
@@ -22,7 +23,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>[4.13.1,)</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -51,6 +52,18 @@
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
+          <!-- Seccion configuration para generar un jar ejecutable de la app -->
+          <configuration>
+            <archive>
+              <manifest>
+                <addClasspath>true</addClasspath>
+                <mainClass>edu.craptocraft.bicipalma.BiciPalma</mainClass>
+              </manifest>
+              <manifestEntries>
+                <url>${project.url}</url>
+              </manifestEntries>
+            </archive>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
