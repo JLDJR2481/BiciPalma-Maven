@@ -3,7 +3,7 @@ package edu.craptocraft.bicipalma.domain.tarjetausuario;
 public class TarjetaUsuario implements Autenticacion {
 
     private final String id;
-    private boolean activada = false;
+    private boolean activada;
 
     public TarjetaUsuario(String id, boolean activada) {
         this.id = id;
@@ -22,7 +22,6 @@ public class TarjetaUsuario implements Autenticacion {
     @Override
     public String toString() {
         return this.id;
-
     }
 
 }

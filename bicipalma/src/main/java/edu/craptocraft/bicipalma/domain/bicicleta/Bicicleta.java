@@ -2,7 +2,7 @@ package edu.craptocraft.bicipalma.domain.bicicleta;
 
 public class Bicicleta implements Movil {
 
-    private final int id;
+    private final Integer id;
 
     public Bicicleta(int id) {
         this.id = id;
@@ -15,6 +15,6 @@ public class Bicicleta implements Movil {
 
     @Override
     public String toString() {
-        return Integer.toString(getId());
+        return this.id.toString();
     }
 }

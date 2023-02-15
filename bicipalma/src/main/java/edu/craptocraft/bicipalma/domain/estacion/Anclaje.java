@@ -1,11 +1,11 @@
 package edu.craptocraft.bicipalma.domain.estacion;
 
-import edu.craptocraft.bicipalma.domain.bicicleta.Movil;
+import edu.craptocraft.bicipalma.domain.bicicleta.*;
 
 public class Anclaje {
 
-    private boolean ocupado = false;
-    private Movil bici = null;
+    private boolean ocupado;
+    private Movil bici;
 
     Anclaje() {
     };
@@ -20,21 +20,12 @@ public class Anclaje {
 
     void anclarBici(Movil bici) {
         this.bici = bici;
-        ocupado = true;
+        this.ocupado = true;
 
     }
 
     void liberarBici() {
-        this.bici = null;
-        ocupado = false;
-
-    }
-
-    @Override
-    public String toString() {
-
-        return "Ocupado: " + Boolean.toString(isOcupado());
-
+        this.ocupado = false;
     }
 
 }
